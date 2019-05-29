@@ -1,6 +1,11 @@
 .App {
   text-align: center;
 }
+ul {
+  list-style: none;
+}
+
+ul li.finished { color: deeppink; }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
