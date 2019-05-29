@@ -10,7 +10,8 @@ class Form extends Component {
         event.preventDefault();
         fetch('http://localhost:3000/tasks', {
             method: 'post',
-            body: JSON.stringify(this.state)
+            body: JSON.stringify(this.state),
+            headers: { 'Content-Type' : 'application/json'}
         })
             .then(res => res.json())
             .then(json => console.log(json))
