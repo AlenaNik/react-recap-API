@@ -19,7 +19,7 @@ onUpdate = () => fetch('http://localhost:3000/tasks')
         <div className="App vh-100 dt w-100 bg-black">
             <div className="dtc v-mid tc white ph3 ph4-l">
           <h1 className="center mw6 br2 fw1 i white-60">TO DO LIST</h1>
-          <List tasks={this.state.tasks} />
+          <List tasks={this.state.tasks} onUpdate={this.onUpdate}  />
           <Form onUpdate={this.onUpdate} />
             </div>
         </div>
