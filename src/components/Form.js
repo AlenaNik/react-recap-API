@@ -14,16 +14,16 @@ class Form extends Component {
             headers: { 'Content-Type' : 'application/json'}
         })
             .then(res => res.json())
-            .then(json => console.log(json))
+            .then(json => this.props.onUpdate())
             .catch(err => console.log(err));
         event.preventDefault();
     };
 
     render() {
         return (
-          <form onSubmit={this.onSubmit}>
+          <form onSubmit={this.onSubmit} className="pa4">
               <input value={this.state.name} onChange={e => this.setState({name: e.target.value})}/>
-                <button>Add</button>
+                <button className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-light-purple">Add</button>
           </form>
         )
     }

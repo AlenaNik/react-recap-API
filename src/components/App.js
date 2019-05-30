@@ -16,10 +16,12 @@ onUpdate = () => fetch('http://localhost:3000/tasks')
 
   render() {
     return (
-        <div className="App">
-          <h1>TO DO</h1>
+        <div className="App vh-100 dt w-100 bg-black">
+            <div className="dtc v-mid tc white ph3 ph4-l">
+          <h1 className="center mw6 br2 fw1 i white-60">TO DO LIST</h1>
           <List tasks={this.state.tasks} />
-          <Form />
+          <Form onUpdate={this.onUpdate} />
+            </div>
         </div>
     );
   }
