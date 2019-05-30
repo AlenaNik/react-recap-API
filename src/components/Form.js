@@ -22,8 +22,8 @@ class Form extends Component {
     render() {
         return (
           <form onSubmit={this.onSubmit} className="pa4">
-              <input value={this.state.name} onChange={e => this.setState({name: e.target.value})}/>
-                <button className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-light-purple">Add</button>
+              <input value={this.state.name} onChange={e => this.setState({name: e.target.value})} className="b pa2 input-reset ba bg-transparent hover-bg-black hover-white w-100"/>
+                <button className="f6 grow no-underline br-pill ph3 pv2 mb2 dib white bg-black">Add</button>
           </form>
         )
     }
